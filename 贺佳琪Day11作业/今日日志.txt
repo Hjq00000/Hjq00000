@@ -1,0 +1,43 @@
+今日是八月十二号，早上起来有点冷
+起来的有点晚，领着我的小包向着班级进发
+现在是早上八点三十七分，此时的我刚背面试背的脑子有点发麻
+所以就是来弄一下今天的日志
+到了第二节课，老师开始讲了echarts报表
+现在jsp页面将删除弹框
+复制一份
+将删除按钮和点击删除全部删掉
+写一个div 给一个id main 然后给它样式
+给宽度600px 和高度300px
+然后将删除按钮复制一个
+更改名字为报表的名字
+btn_echarts
+只留下modal 和 show
+改成echarts 的路径
+然后定一个 myeacharts 
+将上边main 用echarts.init(document.getElementId("main"))
+获得到main给myeacharts
+
+然后将url更改
+然后在写console.log(res)
+然后定义一个x轴的对象xdata 
+给他新建一个数组
+定义一个y轴对象 ydata
+给他新建一个数组
+然后用res.list.forEach(function(res){
+将数据库的内容推给xdata和ydata
+饼状图比较特殊
+ydata.push({value:goods.num,name:goods.typename});
+})
+然后在if（res.success）判断里
+将eachars的图给复制进去
+将xdata和ydata对应的数据更换
+
+
+后台数据
+将删除复制换成echarts
+try里边留一个success
+然后创建一个fbdEcharts方法返回list
+将list导入到后台
+然后在service写findEcharts方法
+接着导入到mapper里
+然后写sql语句就可以查看报表了
